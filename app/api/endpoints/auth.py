@@ -39,7 +39,7 @@ def login(user_details: AuthModel):
     return {'access_token': access_token, 'refresh_token': refresh_token}
 
 
-@router.get('/refresh_token')
+@router.get('/refresh-token')
 def update_token(credentials: HTTPAuthorizationCredentials = Security(security)):
     refresh_token = credentials.credentials
     new_token = auth_handler.refresh_token(refresh_token)
@@ -53,6 +53,6 @@ def secret_data(credentials: HTTPAuthorizationCredentials = Security(security)):
         return 'Top Secret data only authorized users can access this info'
 
 
-@router.get('/no_secret')
+@router.get('/no-secret')
 def not_secret_data():
     return 'Not secret data'
