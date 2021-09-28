@@ -4,6 +4,10 @@
 .venv/
 env/
 venv/
+ENV/
+env.bak/
+venv.bak/
+
 
 # IDEA
 .idea
@@ -17,6 +21,20 @@ __pycache__
 .pytest_cache
 build/
 dist/
+.Python
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+MANIFEST
 
 # Generated
 *.db
@@ -30,4 +48,33 @@ dist/
 .coverage
 coverage.xml
 
-.deta
+# Temp files
+tmp/
+temp/
+tmp.*
+temp.*
+
+# celery beat schedule file
+celerybeat-schedule
+
+# pyenv
+.python-version
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage.*
+.cache
+nosetests.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# PyInstaller
+*.manifest
+*.spec
